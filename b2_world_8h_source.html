@@ -170,7 +170,7 @@
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_world.html#afc33e20e64252c5be115216051408047">ShiftOrigin</a>(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; newOrigin);</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">const</span> b2ContactManager&amp; <a class="code" href="classb2_world.html#a16259159ae1719c30808561c990a8c05" title="Get the contact manager for testing. ">GetContactManager</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">const</span> <a class="code" href="classb2_contact_manager.html">b2ContactManager</a>&amp; <a class="code" href="classb2_world.html#a16259159ae1719c30808561c990a8c05" title="Get the contact manager for testing. ">GetContactManager</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_profile.html" title="Profiling data. Times are in milliseconds. ">b2Profile</a>&amp; <a class="code" href="classb2_world.html#af41b3f1a21efc854b485d311911e24b2" title="Get the current profile. ">GetProfile</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
@@ -188,7 +188,7 @@
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_fixture.html">b2Fixture</a>;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2ContactManager;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_contact_manager.html">b2ContactManager</a>;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2Controller;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">void</span> Solve(<span class="keyword">const</span> b2TimeStep&amp; step);</div>
@@ -202,7 +202,7 @@
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    int32 m_flags;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    b2ContactManager m_contactManager;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="classb2_contact_manager.html">b2ContactManager</a> m_contactManager;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* m_bodyList;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="classb2_joint.html">b2Joint</a>* m_jointList;</div>
@@ -307,7 +307,7 @@
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">return</span> (m_flags &amp; e_clearForces) == e_clearForces;</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="classb2_world.html#a16259159ae1719c30808561c990a8c05">  344</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> b2ContactManager&amp; <a class="code" href="classb2_world.html#a16259159ae1719c30808561c990a8c05" title="Get the contact manager for testing. ">b2World::GetContactManager</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="classb2_world.html#a16259159ae1719c30808561c990a8c05">  344</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classb2_contact_manager.html">b2ContactManager</a>&amp; <a class="code" href="classb2_world.html#a16259159ae1719c30808561c990a8c05" title="Get the contact manager for testing. ">b2World::GetContactManager</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordflow">return</span> m_contactManager;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;}</div>
@@ -321,7 +321,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 17:57:20 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
