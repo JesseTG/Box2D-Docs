@@ -75,17 +75,17 @@
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;Box2D/Common/b2Math.h&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;Box2D/Collision/b2Distance.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structb2_t_o_i_input.html">   26</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_t_o_i_input.html" title="Input parameters for b2TimeOfImpact. ">b2TOIInput</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">struct </span>b2TOIInput</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="structb2_distance_proxy.html">b2DistanceProxy</a> proxyA;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="structb2_distance_proxy.html">b2DistanceProxy</a> proxyB;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="structb2_sweep.html">b2Sweep</a> sweepA;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="structb2_sweep.html">b2Sweep</a> sweepB;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    b2DistanceProxy proxyA;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    b2DistanceProxy proxyB;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    b2Sweep sweepA;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    b2Sweep sweepB;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    float32 tMax;       <span class="comment">// defines sweep interval [0, tMax]</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// Output parameters for b2TimeOfImpact.</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structb2_t_o_i_output.html">   36</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_t_o_i_output.html">b2TOIOutput</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">struct </span>b2TOIOutput</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">enum</span> State</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
@@ -100,13 +100,13 @@
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    float32 t;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> b2TimeOfImpact(<a class="code" href="structb2_t_o_i_output.html">b2TOIOutput</a>* output, <span class="keyword">const</span> <a class="code" href="structb2_t_o_i_input.html" title="Input parameters for b2TimeOfImpact. ">b2TOIInput</a>* input);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> b2TimeOfImpact(b2TOIOutput* output, <span class="keyword">const</span> b2TOIInput* input);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

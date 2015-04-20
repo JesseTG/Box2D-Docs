@@ -60,21 +60,8 @@
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="b2_contact_8h_source.html">b2Contact.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for b2Contact:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classb2_contact.png" usemap="#b2Contact_map" alt=""/>
-  <map id="b2Contact_map" name="b2Contact_map">
-<area href="classb2_chain_and_circle_contact.html" alt="b2ChainAndCircleContact" shape="rect" coords="0,56,172,80"/>
-<area href="classb2_chain_and_polygon_contact.html" alt="b2ChainAndPolygonContact" shape="rect" coords="182,56,354,80"/>
-<area href="classb2_circle_contact.html" alt="b2CircleContact" shape="rect" coords="364,56,536,80"/>
-<area href="classb2_edge_and_circle_contact.html" alt="b2EdgeAndCircleContact" shape="rect" coords="546,56,718,80"/>
-<area href="classb2_edge_and_polygon_contact.html" alt="b2EdgeAndPolygonContact" shape="rect" coords="728,56,900,80"/>
-<area href="classb2_polygon_and_circle_contact.html" alt="b2PolygonAndCircleContact" shape="rect" coords="910,56,1082,80"/>
-<area href="classb2_polygon_contact.html" alt="b2PolygonContact" shape="rect" coords="1092,56,1264,80"/>
-</map>
- </div></div>
+
+<p>Inherited by b2ChainAndCircleContact, b2ChainAndPolygonContact, b2CircleContact, b2EdgeAndCircleContact, b2EdgeAndPolygonContact, b2PolygonAndCircleContact, and b2PolygonContact.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -216,10 +203,10 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><b>m_flags</b></td></t
 <a class="el" href="classb2_contact.html">b2Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_next</b></td></tr>
 <tr class="separator:a241fea000d26da8761b5520a9adcd87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f5ce747bb04f48843eb07304d47faab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f5ce747bb04f48843eb07304d47faab"></a>
-<a class="el" href="structb2_contact_edge.html">b2ContactEdge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_nodeA</b></td></tr>
+b2ContactEdge&#160;</td><td class="memItemRight" valign="bottom"><b>m_nodeA</b></td></tr>
 <tr class="separator:a5f5ce747bb04f48843eb07304d47faab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4887c3acb8cb857e2bec659027539c7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4887c3acb8cb857e2bec659027539c7a"></a>
-<a class="el" href="structb2_contact_edge.html">b2ContactEdge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_nodeB</b></td></tr>
+b2ContactEdge&#160;</td><td class="memItemRight" valign="bottom"><b>m_nodeB</b></td></tr>
 <tr class="separator:a4887c3acb8cb857e2bec659027539c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec94bbbb8862f09365a5af99650b5be4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec94bbbb8862f09365a5af99650b5be4"></a>
 <a class="el" href="classb2_fixture.html">b2Fixture</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_fixtureA</b></td></tr>
@@ -255,7 +242,7 @@ float32&#160;</td><td class="memItemRight" valign="bottom"><b>m_tangentSpeed</b>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr class="memitem:a5e2beb4e435e1545ae043a7a2b77d1da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e2beb4e435e1545ae043a7a2b77d1da"></a>
-static <a class="el" href="structb2_contact_register.html">b2ContactRegister</a>&#160;</td><td class="memItemRight" valign="bottom"><b>s_registers</b> [b2Shape::e_typeCount][b2Shape::e_typeCount]</td></tr>
+static b2ContactRegister&#160;</td><td class="memItemRight" valign="bottom"><b>s_registers</b> [b2Shape::e_typeCount][b2Shape::e_typeCount]</td></tr>
 <tr class="separator:a5e2beb4e435e1545ae043a7a2b77d1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a672598c350694d7b9a89c45f8ad0dd90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a672598c350694d7b9a89c45f8ad0dd90"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>s_initialized</b> = false</td></tr>
@@ -263,15 +250,9 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>s_initialized<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:aece264d42f69aed410f5eb3beba6ddf2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aece264d42f69aed410f5eb3beba6ddf2"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>b2ContactManager</b></td></tr>
-<tr class="separator:aece264d42f69aed410f5eb3beba6ddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd536c5a7c0587913765bbc2693ceea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bd536c5a7c0587913765bbc2693ceea"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>b2World</b></td></tr>
 <tr class="separator:a4bd536c5a7c0587913765bbc2693ceea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb788a7ba90344f3ddbafff3de0465c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb788a7ba90344f3ddbafff3de0465c4"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>b2ContactSolver</b></td></tr>
-<tr class="separator:afb788a7ba90344f3ddbafff3de0465c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010ab52de250e5fe30a45d642f46405b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a010ab52de250e5fe30a45d642f46405b"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>b2Body</b></td></tr>
 <tr class="separator:a010ab52de250e5fe30a45d642f46405b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,7 +369,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>b2Fixture</b></td></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

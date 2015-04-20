@@ -63,20 +63,12 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structb2_contact_feature.html">b2ContactFeature</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionb2_contact_i_d.html">b2ContactID</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contact ids to facilitate warm starting.  <a href="unionb2_contact_i_d.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structb2_manifold_point.html">b2ManifoldPoint</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structb2_manifold.html">b2Manifold</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structb2_world_manifold.html">b2WorldManifold</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is used to compute the current state of a contact manifold.  <a href="structb2_world_manifold.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structb2_clip_vertex.html">b2ClipVertex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for computing contact manifolds.  <a href="structb2_clip_vertex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structb2_ray_cast_input.html">b2RayCastInput</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ray-cast input data. The ray extends from p1 to p1 + maxFraction * (p2 - p1).  <a href="structb2_ray_cast_input.html#details">More...</a><br /></td></tr>
@@ -101,28 +93,8 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a401e2747d276e9fbfd131989e02ff568"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="b2_collision_8h.html#a401e2747d276e9fbfd131989e02ff568">b2GetPointStates</a> (<a class="el" href="b2_collision_8h.html#a0a894e3715ce8c61b7958dd6e083663d">b2PointState</a> state1[<a class="el" href="b2_settings_8h.html#aa5f44cc9edf711433dea2b2ec94f3c42">b2_maxManifoldPoints</a>], <a class="el" href="b2_collision_8h.html#a0a894e3715ce8c61b7958dd6e083663d">b2PointState</a> state2[<a class="el" href="b2_settings_8h.html#aa5f44cc9edf711433dea2b2ec94f3c42">b2_maxManifoldPoints</a>], const <a class="el" href="structb2_manifold.html">b2Manifold</a> *manifold1, const <a class="el" href="structb2_manifold.html">b2Manifold</a> *manifold2)</td></tr>
 <tr class="separator:a401e2747d276e9fbfd131989e02ff568"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a1bf2c6a9453307466f4870c1fa333"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8a1bf2c6a9453307466f4870c1fa333"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="b2_collision_8h.html#ab8a1bf2c6a9453307466f4870c1fa333">b2CollideCircles</a> (<a class="el" href="structb2_manifold.html">b2Manifold</a> *manifold, const <a class="el" href="classb2_circle_shape.html">b2CircleShape</a> *circleA, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfA, const <a class="el" href="classb2_circle_shape.html">b2CircleShape</a> *circleB, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfB)</td></tr>
-<tr class="memdesc:ab8a1bf2c6a9453307466f4870c1fa333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the collision manifold between two circles. <br /></td></tr>
-<tr class="separator:ab8a1bf2c6a9453307466f4870c1fa333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30da13c857596fbefa40b47c3e1e78d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30da13c857596fbefa40b47c3e1e78d0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="b2_collision_8h.html#a30da13c857596fbefa40b47c3e1e78d0">b2CollidePolygonAndCircle</a> (<a class="el" href="structb2_manifold.html">b2Manifold</a> *manifold, const <a class="el" href="classb2_polygon_shape.html">b2PolygonShape</a> *polygonA, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfA, const <a class="el" href="classb2_circle_shape.html">b2CircleShape</a> *circleB, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfB)</td></tr>
-<tr class="memdesc:a30da13c857596fbefa40b47c3e1e78d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the collision manifold between a polygon and a circle. <br /></td></tr>
-<tr class="separator:a30da13c857596fbefa40b47c3e1e78d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7b9859479384c0e2cceb9e7744afcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f7b9859479384c0e2cceb9e7744afcb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="b2_collision_8h.html#a2f7b9859479384c0e2cceb9e7744afcb">b2CollidePolygons</a> (<a class="el" href="structb2_manifold.html">b2Manifold</a> *manifold, const <a class="el" href="classb2_polygon_shape.html">b2PolygonShape</a> *polygonA, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfA, const <a class="el" href="classb2_polygon_shape.html">b2PolygonShape</a> *polygonB, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfB)</td></tr>
-<tr class="memdesc:a2f7b9859479384c0e2cceb9e7744afcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the collision manifold between two polygons. <br /></td></tr>
-<tr class="separator:a2f7b9859479384c0e2cceb9e7744afcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee6f752fdf8c89152e824da12e944733"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee6f752fdf8c89152e824da12e944733"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="b2_collision_8h.html#aee6f752fdf8c89152e824da12e944733">b2CollideEdgeAndCircle</a> (<a class="el" href="structb2_manifold.html">b2Manifold</a> *manifold, const <a class="el" href="classb2_edge_shape.html">b2EdgeShape</a> *polygonA, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfA, const <a class="el" href="classb2_circle_shape.html">b2CircleShape</a> *circleB, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfB)</td></tr>
-<tr class="memdesc:aee6f752fdf8c89152e824da12e944733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the collision manifold between an edge and a circle. <br /></td></tr>
-<tr class="separator:aee6f752fdf8c89152e824da12e944733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d0c5fab412d5ca886b1965666b16d99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d0c5fab412d5ca886b1965666b16d99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="b2_collision_8h.html#a5d0c5fab412d5ca886b1965666b16d99">b2CollideEdgeAndPolygon</a> (<a class="el" href="structb2_manifold.html">b2Manifold</a> *manifold, const <a class="el" href="classb2_edge_shape.html">b2EdgeShape</a> *edgeA, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfA, const <a class="el" href="classb2_polygon_shape.html">b2PolygonShape</a> *circleB, const <a class="el" href="structb2_transform.html">b2Transform</a> &amp;xfB)</td></tr>
-<tr class="memdesc:a5d0c5fab412d5ca886b1965666b16d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the collision manifold between an edge and a circle. <br /></td></tr>
-<tr class="separator:a5d0c5fab412d5ca886b1965666b16d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b36e651798f55f2533f9837462ded41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b36e651798f55f2533f9837462ded41"></a>
-int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="b2_collision_8h.html#a8b36e651798f55f2533f9837462ded41">b2ClipSegmentToLine</a> (<a class="el" href="structb2_clip_vertex.html">b2ClipVertex</a> vOut[2], const <a class="el" href="structb2_clip_vertex.html">b2ClipVertex</a> vIn[2], const <a class="el" href="structb2_vec2.html">b2Vec2</a> &amp;normal, float32 offset, int32 vertexIndexA)</td></tr>
+int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="b2_collision_8h.html#a8b36e651798f55f2533f9837462ded41">b2ClipSegmentToLine</a> (b2ClipVertex vOut[2], const b2ClipVertex vIn[2], const <a class="el" href="structb2_vec2.html">b2Vec2</a> &amp;normal, float32 offset, int32 vertexIndexA)</td></tr>
 <tr class="memdesc:a8b36e651798f55f2533f9837462ded41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clipping for contact manifolds. <br /></td></tr>
 <tr class="separator:a8b36e651798f55f2533f9837462ded41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7601420d0b42c1ee494e879dd2009a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7601420d0b42c1ee494e879dd2009a5"></a>
@@ -213,7 +185,7 @@ const uint8&#160;</td><td class="memItemRight" valign="bottom"><b>b2_nullFeature
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

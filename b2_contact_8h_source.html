@@ -100,19 +100,19 @@
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                        <a class="code" href="classb2_block_allocator.html">b2BlockAllocator</a>* allocator);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> b2ContactDestroyFcn(<a class="code" href="classb2_contact.html">b2Contact</a>* contact, <a class="code" href="classb2_block_allocator.html">b2BlockAllocator</a>* allocator);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structb2_contact_register.html">   54</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_contact_register.html">b2ContactRegister</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">struct </span>b2ContactRegister</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    b2ContactCreateFcn* createFcn;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    b2ContactDestroyFcn* destroyFcn;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> primary;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structb2_contact_edge.html">   66</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_contact_edge.html">b2ContactEdge</a></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">struct </span>b2ContactEdge</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structb2_contact_edge.html#a69015fc22e064eac04ed74f27a13ae78">   68</a></span>&#160;    <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* <a class="code" href="structb2_contact_edge.html#a69015fc22e064eac04ed74f27a13ae78" title="provides quick access to the other body attached. ">other</a>;          </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structb2_contact_edge.html#a2fbfaffa0dfdf715fd1a709cff939dee">   69</a></span>&#160;    <a class="code" href="classb2_contact.html">b2Contact</a>* <a class="code" href="structb2_contact_edge.html#a2fbfaffa0dfdf715fd1a709cff939dee" title="the contact ">contact</a>;     </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structb2_contact_edge.html#a606dfacb78dc5c51672e4d7449006b8c">   70</a></span>&#160;    <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a>* <a class="code" href="structb2_contact_edge.html#a606dfacb78dc5c51672e4d7449006b8c" title="the previous contact edge in the body&#39;s contact list ">prev</a>;    </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structb2_contact_edge.html#a9af32b3cfadf35a927f4dffcf6338a6d">   71</a></span>&#160;    <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a>* <a class="code" href="structb2_contact_edge.html#a9af32b3cfadf35a927f4dffcf6338a6d" title="the next contact edge in the body&#39;s contact list ">next</a>;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* other;          </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classb2_contact.html">b2Contact</a>* contact;     </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    b2ContactEdge* prev;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    b2ContactEdge* next;    </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classb2_contact.html">   77</a></span>&#160;<span class="keyword">class </span><a class="code" href="classb2_contact.html">b2Contact</a></div>
@@ -162,9 +162,9 @@
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classb2_contact.html#ae3c2842e5325b2d4500f8ed1d4de2f72" title="Evaluate this contact with your own manifold and transforms. ">Evaluate</a>(<a class="code" href="structb2_manifold.html">b2Manifold</a>* manifold, <span class="keyword">const</span> <a class="code" href="structb2_transform.html">b2Transform</a>&amp; xfA, <span class="keyword">const</span> <a class="code" href="structb2_transform.html">b2Transform</a>&amp; xfB) = 0;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_contact_manager.html">b2ContactManager</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2ContactManager;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_world.html">b2World</a>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_contact_solver.html">b2ContactSolver</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2ContactSolver;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_fixture.html">b2Fixture</a>;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
@@ -205,7 +205,7 @@
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">void</span> Update(<a class="code" href="classb2_contact_listener.html">b2ContactListener</a>* listener);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">static</span> <a class="code" href="structb2_contact_register.html">b2ContactRegister</a> s_registers[b2Shape::e_typeCount][b2Shape::e_typeCount];</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">static</span> b2ContactRegister s_registers[b2Shape::e_typeCount][b2Shape::e_typeCount];</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> s_initialized;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    uint32 m_flags;</div>
@@ -215,8 +215,8 @@
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="classb2_contact.html">b2Contact</a>* m_next;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="comment">// Nodes for connecting bodies.</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a> m_nodeA;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a> m_nodeB;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    b2ContactEdge m_nodeA;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    b2ContactEdge m_nodeB;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="classb2_fixture.html">b2Fixture</a>* m_fixtureA;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="classb2_fixture.html">b2Fixture</a>* m_fixtureB;</div>
@@ -366,7 +366,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:03 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

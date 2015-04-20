@@ -157,13 +157,13 @@ Protected Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>b2DistanceJoint</b> (const <a class="el" href="structb2_distance_joint_def.html">b2DistanceJointDef</a> *data)</td></tr>
 <tr class="separator:ad2bb6de92a47868629a7397e23256454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2062ea8f1c89f8ccc3f053bbc7211b12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2062ea8f1c89f8ccc3f053bbc7211b12"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>InitVelocityConstraints</b> (const <a class="el" href="structb2_solver_data.html">b2SolverData</a> &amp;data)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitVelocityConstraints</b> (const b2SolverData &amp;data)</td></tr>
 <tr class="separator:a2062ea8f1c89f8ccc3f053bbc7211b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbed5cd22ea4ccb44e4defe5f5aabe77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbed5cd22ea4ccb44e4defe5f5aabe77"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SolveVelocityConstraints</b> (const <a class="el" href="structb2_solver_data.html">b2SolverData</a> &amp;data)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SolveVelocityConstraints</b> (const b2SolverData &amp;data)</td></tr>
 <tr class="separator:acbed5cd22ea4ccb44e4defe5f5aabe77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e8b3a477067cf9273fb78fbec1a1556"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e8b3a477067cf9273fb78fbec1a1556"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>SolvePositionConstraints</b> (const <a class="el" href="structb2_solver_data.html">b2SolverData</a> &amp;data)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SolvePositionConstraints</b> (const b2SolverData &amp;data)</td></tr>
 <tr class="separator:a1e8b3a477067cf9273fb78fbec1a1556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classb2_joint"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classb2_joint')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classb2_joint.html">b2Joint</a></td></tr>
 <tr class="memitem:a8d6cce91546335fe95325d5e29c06a19 inherit pro_methods_classb2_joint"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d6cce91546335fe95325d5e29c06a19"></a>
@@ -243,10 +243,10 @@ b2JointType&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b></td
 <a class="el" href="classb2_joint.html">b2Joint</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_next</b></td></tr>
 <tr class="separator:aad16778ba9c51cebb767ff7df6ed80b5 inherit pro_attribs_classb2_joint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a406ea423db1fe6484408d73df647f7b2 inherit pro_attribs_classb2_joint"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a406ea423db1fe6484408d73df647f7b2"></a>
-<a class="el" href="structb2_joint_edge.html">b2JointEdge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_edgeA</b></td></tr>
+b2JointEdge&#160;</td><td class="memItemRight" valign="bottom"><b>m_edgeA</b></td></tr>
 <tr class="separator:a406ea423db1fe6484408d73df647f7b2 inherit pro_attribs_classb2_joint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1041219dcd353ea815ebd78f904af547 inherit pro_attribs_classb2_joint"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1041219dcd353ea815ebd78f904af547"></a>
-<a class="el" href="structb2_joint_edge.html">b2JointEdge</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_edgeB</b></td></tr>
+b2JointEdge&#160;</td><td class="memItemRight" valign="bottom"><b>m_edgeB</b></td></tr>
 <tr class="separator:a1041219dcd353ea815ebd78f904af547 inherit pro_attribs_classb2_joint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaebb784a51abb7d66de302ba07a4467 inherit pro_attribs_classb2_joint"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaebb784a51abb7d66de302ba07a4467"></a>
 <a class="el" href="classb2_body.html">b2Body</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_bodyA</b></td></tr>
@@ -372,7 +372,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Destroy</b> (<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

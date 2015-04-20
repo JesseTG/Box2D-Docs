@@ -77,13 +77,13 @@
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;Box2D/Collision/b2DynamicTree.h&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structb2_pair.html">   27</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_pair.html">b2Pair</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">struct </span>b2Pair</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    int32 proxyIdA;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    int32 proxyIdB;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classb2_broad_phase.html">b2BroadPhase</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span>b2BroadPhase</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
@@ -92,52 +92,52 @@
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        e_nullProxy = -1</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    };</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classb2_broad_phase.html">b2BroadPhase</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ~<a class="code" href="classb2_broad_phase.html">b2BroadPhase</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    b2BroadPhase();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ~b2BroadPhase();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    int32 <a class="code" href="classb2_broad_phase.html#ae2f7af756bc55ece45221466c5af449c">CreateProxy</a>(<span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabb, <span class="keywordtype">void</span>* userData);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    int32 CreateProxy(<span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabb, <span class="keywordtype">void</span>* userData);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#a84f0fb227dc01a9b9baa55c7b8c68984" title="Destroy a proxy. It is up to the client to remove any pairs. ">DestroyProxy</a>(int32 proxyId);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> DestroyProxy(int32 proxyId);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#a01dc18a19c2b5d0cc1d9cd8c8554234c">MoveProxy</a>(int32 proxyId, <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabb, <span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; displacement);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> MoveProxy(int32 proxyId, <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabb, <span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; displacement);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#a67b296431ebbc7b44037f21d645d9166" title="Call to trigger a re-processing of it&#39;s pairs on the next call to UpdatePairs. ">TouchProxy</a>(int32 proxyId);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> TouchProxy(int32 proxyId);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; <a class="code" href="classb2_broad_phase.html#a7b00ac700db52e52248a25397007d4ff" title="Get the fat AABB for a proxy. ">GetFatAABB</a>(int32 proxyId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; GetFatAABB(int32 proxyId) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span>* <a class="code" href="classb2_broad_phase.html#a89c099e95237d68577376d8f9a4ed013" title="Get user data from a proxy. Returns NULL if the id is invalid. ">GetUserData</a>(int32 proxyId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span>* GetUserData(int32 proxyId) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classb2_broad_phase.html#a1785eb29d14997d81bd537f064d22aba" title="Test overlap of fat AABBs. ">TestOverlap</a>(int32 proxyIdA, int32 proxyIdB) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> TestOverlap(int32 proxyIdA, int32 proxyIdB) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    int32 <a class="code" href="classb2_broad_phase.html#a399fa4f5289a1ec46a65f726f3bac890" title="Get the number of proxies. ">GetProxyCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    int32 GetProxyCount() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#a0a1acd693466b997700242ae00784c20" title="Update the pairs. This results in pair callbacks. This can only add pairs. ">UpdatePairs</a>(T* callback);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> UpdatePairs(T* callback);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#aea5732362c8bb3959c6b24f967654d93">Query</a>(T* callback, <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabb) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> Query(T* callback, <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabb) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#aebcb837120ce45bbb82b4b61db533026">RayCast</a>(T* callback, <span class="keyword">const</span> <a class="code" href="structb2_ray_cast_input.html" title="Ray-cast input data. The ray extends from p1 to p1 + maxFraction * (p2 - p1). ">b2RayCastInput</a>&amp; input) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> RayCast(T* callback, <span class="keyword">const</span> <a class="code" href="structb2_ray_cast_input.html" title="Ray-cast input data. The ray extends from p1 to p1 + maxFraction * (p2 - p1). ">b2RayCastInput</a>&amp; input) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    int32 <a class="code" href="classb2_broad_phase.html#aeb9f94f44840c5bd766031d78f63ca08" title="Get the height of the embedded tree. ">GetTreeHeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    int32 GetTreeHeight() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    int32 <a class="code" href="classb2_broad_phase.html#a1189e783d39bfd69b314284ce52ea3c3" title="Get the balance of the embedded tree. ">GetTreeBalance</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    int32 GetTreeBalance() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    float32 <a class="code" href="classb2_broad_phase.html#abe02c30ca1b3b9c9b84a571a2f8cef92" title="Get the quality metric of the embedded tree. ">GetTreeQuality</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    float32 GetTreeQuality() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#a410e6115e3d1b4fca61cfbf397767772">ShiftOrigin</a>(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; newOrigin);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> ShiftOrigin(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; newOrigin);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_dynamic_tree.html">b2DynamicTree</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2DynamicTree;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> BufferMove(int32 proxyId);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> UnBufferMove(int32 proxyId);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">bool</span> QueryCallback(int32 proxyId);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classb2_dynamic_tree.html">b2DynamicTree</a> m_tree;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    b2DynamicTree m_tree;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    int32 m_proxyCount;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
@@ -145,14 +145,14 @@
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    int32 m_moveCapacity;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    int32 m_moveCount;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="structb2_pair.html">b2Pair</a>* m_pairBuffer;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    b2Pair* m_pairBuffer;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    int32 m_pairCapacity;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    int32 m_pairCount;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    int32 m_queryProxyId;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> b2PairLessThan(<span class="keyword">const</span> <a class="code" href="structb2_pair.html">b2Pair</a>&amp; pair1, <span class="keyword">const</span> <a class="code" href="structb2_pair.html">b2Pair</a>&amp; pair2)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> b2PairLessThan(<span class="keyword">const</span> b2Pair&amp; pair1, <span class="keyword">const</span> b2Pair&amp; pair2)</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (pair1.proxyIdA &lt; pair2.proxyIdA)</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
@@ -167,45 +167,45 @@
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#a89c099e95237d68577376d8f9a4ed013">  147</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span>* <a class="code" href="classb2_broad_phase.html#a89c099e95237d68577376d8f9a4ed013" title="Get user data from a proxy. Returns NULL if the id is invalid. ">b2BroadPhase::GetUserData</a>(int32 proxyId)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span>* b2BroadPhase::GetUserData(int32 proxyId)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> m_tree.<a class="code" href="classb2_dynamic_tree.html#a44ab57dce3c42b0a5847a64e489a71ce">GetUserData</a>(proxyId);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> m_tree.GetUserData(proxyId);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#a1785eb29d14997d81bd537f064d22aba">  152</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classb2_broad_phase.html#a1785eb29d14997d81bd537f064d22aba" title="Test overlap of fat AABBs. ">b2BroadPhase::TestOverlap</a>(int32 proxyIdA, int32 proxyIdB)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> b2BroadPhase::TestOverlap(int32 proxyIdA, int32 proxyIdB)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabbA = m_tree.<a class="code" href="classb2_dynamic_tree.html#adf4676b1c34a57b4451bcbeaebe65687" title="Get the fat AABB for a proxy. ">GetFatAABB</a>(proxyIdA);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabbB = m_tree.<a class="code" href="classb2_dynamic_tree.html#adf4676b1c34a57b4451bcbeaebe65687" title="Get the fat AABB for a proxy. ">GetFatAABB</a>(proxyIdB);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabbA = m_tree.GetFatAABB(proxyIdA);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabbB = m_tree.GetFatAABB(proxyIdB);</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="b2_collision_8h.html#ae7601420d0b42c1ee494e879dd2009a5" title="Determine if two generic shapes overlap. ">b2TestOverlap</a>(aabbA, aabbB);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#a7b00ac700db52e52248a25397007d4ff">  159</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; <a class="code" href="classb2_broad_phase.html#a7b00ac700db52e52248a25397007d4ff" title="Get the fat AABB for a proxy. ">b2BroadPhase::GetFatAABB</a>(int32 proxyId)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; b2BroadPhase::GetFatAABB(int32 proxyId)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> m_tree.<a class="code" href="classb2_dynamic_tree.html#adf4676b1c34a57b4451bcbeaebe65687" title="Get the fat AABB for a proxy. ">GetFatAABB</a>(proxyId);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> m_tree.GetFatAABB(proxyId);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#a399fa4f5289a1ec46a65f726f3bac890">  164</a></span>&#160;<span class="keyword">inline</span> int32 <a class="code" href="classb2_broad_phase.html#a399fa4f5289a1ec46a65f726f3bac890" title="Get the number of proxies. ">b2BroadPhase::GetProxyCount</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">inline</span> int32 b2BroadPhase::GetProxyCount()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> m_proxyCount;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#aeb9f94f44840c5bd766031d78f63ca08">  169</a></span>&#160;<span class="keyword">inline</span> int32 <a class="code" href="classb2_broad_phase.html#aeb9f94f44840c5bd766031d78f63ca08" title="Get the height of the embedded tree. ">b2BroadPhase::GetTreeHeight</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">inline</span> int32 b2BroadPhase::GetTreeHeight()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> m_tree.<a class="code" href="classb2_dynamic_tree.html#add7e09cdf279e7c0031da9dfd4cdf4db">GetHeight</a>();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> m_tree.GetHeight();</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#a1189e783d39bfd69b314284ce52ea3c3">  174</a></span>&#160;<span class="keyword">inline</span> int32 <a class="code" href="classb2_broad_phase.html#a1189e783d39bfd69b314284ce52ea3c3" title="Get the balance of the embedded tree. ">b2BroadPhase::GetTreeBalance</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">inline</span> int32 b2BroadPhase::GetTreeBalance()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> m_tree.<a class="code" href="classb2_dynamic_tree.html#ae02c45d1a68b42e59d170438ddbb7977">GetMaxBalance</a>();</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> m_tree.GetMaxBalance();</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#abe02c30ca1b3b9c9b84a571a2f8cef92">  179</a></span>&#160;<span class="keyword">inline</span> float32 <a class="code" href="classb2_broad_phase.html#abe02c30ca1b3b9c9b84a571a2f8cef92" title="Get the quality metric of the embedded tree. ">b2BroadPhase::GetTreeQuality</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">inline</span> float32 b2BroadPhase::GetTreeQuality()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> m_tree.<a class="code" href="classb2_dynamic_tree.html#ad78282a720c451e032b43c34cba02f1a" title="Get the ratio of the sum of the node areas to the root area. ">GetAreaRatio</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> m_tree.GetAreaRatio();</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#a0a1acd693466b997700242ae00784c20">  185</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#a0a1acd693466b997700242ae00784c20" title="Update the pairs. This results in pair callbacks. This can only add pairs. ">b2BroadPhase::UpdatePairs</a>(T* callback)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keywordtype">void</span> b2BroadPhase::UpdatePairs(T* callback)</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">// Reset pair buffer</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    m_pairCount = 0;</div>
@@ -221,10 +221,10 @@
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="comment">// We have to query the tree with the fat AABB so that</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="comment">// we don&#39;t fail to create a pair that may touch later.</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; fatAABB = m_tree.<a class="code" href="classb2_dynamic_tree.html#adf4676b1c34a57b4451bcbeaebe65687" title="Get the fat AABB for a proxy. ">GetFatAABB</a>(m_queryProxyId);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; fatAABB = m_tree.GetFatAABB(m_queryProxyId);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="comment">// Query tree, create pairs and add them pair buffer.</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        m_tree.<a class="code" href="classb2_dynamic_tree.html#adf70aee89b4692fc79d65b1f54308585">Query</a>(<span class="keyword">this</span>, fatAABB);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        m_tree.Query(<span class="keyword">this</span>, fatAABB);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">// Reset move buffer</span></div>
@@ -237,9 +237,9 @@
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    int32 i = 0;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">while</span> (i &lt; m_pairCount)</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <a class="code" href="structb2_pair.html">b2Pair</a>* primaryPair = m_pairBuffer + i;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordtype">void</span>* userDataA = m_tree.<a class="code" href="classb2_dynamic_tree.html#a44ab57dce3c42b0a5847a64e489a71ce">GetUserData</a>(primaryPair-&gt;proxyIdA);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordtype">void</span>* userDataB = m_tree.<a class="code" href="classb2_dynamic_tree.html#a44ab57dce3c42b0a5847a64e489a71ce">GetUserData</a>(primaryPair-&gt;proxyIdB);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        b2Pair* primaryPair = m_pairBuffer + i;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordtype">void</span>* userDataA = m_tree.GetUserData(primaryPair-&gt;proxyIdA);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordtype">void</span>* userDataB = m_tree.GetUserData(primaryPair-&gt;proxyIdB);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        callback-&gt;AddPair(userDataA, userDataB);</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        ++i;</div>
@@ -247,7 +247,7 @@
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="comment">// Skip any duplicate pairs.</span></div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">while</span> (i &lt; m_pairCount)</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <a class="code" href="structb2_pair.html">b2Pair</a>* pair = m_pairBuffer + i;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            b2Pair* pair = m_pairBuffer + i;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> (pair-&gt;proxyIdA != primaryPair-&gt;proxyIdA || pair-&gt;proxyIdB != primaryPair-&gt;proxyIdB)</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">break</span>;</div>
@@ -261,27 +261,27 @@
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#aea5732362c8bb3959c6b24f967654d93">  241</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#aea5732362c8bb3959c6b24f967654d93">b2BroadPhase::Query</a>(T* callback, <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabb)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> b2BroadPhase::Query(T* callback, <span class="keyword">const</span> <a class="code" href="structb2_a_a_b_b.html" title="An axis aligned bounding box. ">b2AABB</a>&amp; aabb)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    m_tree.<a class="code" href="classb2_dynamic_tree.html#adf70aee89b4692fc79d65b1f54308585">Query</a>(callback, aabb);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    m_tree.Query(callback, aabb);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#aebcb837120ce45bbb82b4b61db533026">  247</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#aebcb837120ce45bbb82b4b61db533026">b2BroadPhase::RayCast</a>(T* callback, <span class="keyword">const</span> <a class="code" href="structb2_ray_cast_input.html" title="Ray-cast input data. The ray extends from p1 to p1 + maxFraction * (p2 - p1). ">b2RayCastInput</a>&amp; input)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> b2BroadPhase::RayCast(T* callback, <span class="keyword">const</span> <a class="code" href="structb2_ray_cast_input.html" title="Ray-cast input data. The ray extends from p1 to p1 + maxFraction * (p2 - p1). ">b2RayCastInput</a>&amp; input)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    m_tree.<a class="code" href="classb2_dynamic_tree.html#abd7a5c6a5bc109dbbdb0ec3aae039648">RayCast</a>(callback, input);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    m_tree.RayCast(callback, input);</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classb2_broad_phase.html#a410e6115e3d1b4fca61cfbf397767772">  252</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classb2_broad_phase.html#a410e6115e3d1b4fca61cfbf397767772">b2BroadPhase::ShiftOrigin</a>(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; newOrigin)</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> b2BroadPhase::ShiftOrigin(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; newOrigin)</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;{</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    m_tree.<a class="code" href="classb2_dynamic_tree.html#af37ddfed6a5da97d5a78b09918d19ceb">ShiftOrigin</a>(newOrigin);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    m_tree.ShiftOrigin(newOrigin);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:03 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

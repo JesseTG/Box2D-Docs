@@ -76,24 +76,24 @@
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="classb2_block_allocator.html">b2BlockAllocator</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classb2_chain_and_circle_contact.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classb2_chain_and_circle_contact.html">b2ChainAndCircleContact</a> : <span class="keyword">public</span> <a class="code" href="classb2_contact.html">b2Contact</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span>b2ChainAndCircleContact : <span class="keyword">public</span> <a class="code" href="classb2_contact.html">b2Contact</a></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">static</span> <a class="code" href="classb2_contact.html">b2Contact</a>* Create(   <a class="code" href="classb2_fixture.html">b2Fixture</a>* fixtureA, int32 indexA,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                <a class="code" href="classb2_fixture.html">b2Fixture</a>* fixtureB, int32 indexB, <a class="code" href="classb2_block_allocator.html">b2BlockAllocator</a>* allocator);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> Destroy(<a class="code" href="classb2_contact.html">b2Contact</a>* contact, <a class="code" href="classb2_block_allocator.html">b2BlockAllocator</a>* allocator);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classb2_chain_and_circle_contact.html">b2ChainAndCircleContact</a>(<a class="code" href="classb2_fixture.html">b2Fixture</a>* fixtureA, int32 indexA, <a class="code" href="classb2_fixture.html">b2Fixture</a>* fixtureB, int32 indexB);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ~<a class="code" href="classb2_chain_and_circle_contact.html">b2ChainAndCircleContact</a>() {}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    b2ChainAndCircleContact(<a class="code" href="classb2_fixture.html">b2Fixture</a>* fixtureA, int32 indexA, <a class="code" href="classb2_fixture.html">b2Fixture</a>* fixtureB, int32 indexB);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ~b2ChainAndCircleContact() {}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_chain_and_circle_contact.html#afe52ebd870f24cbecedd1db662705f12" title="Evaluate this contact with your own manifold and transforms. ">Evaluate</a>(<a class="code" href="structb2_manifold.html">b2Manifold</a>* manifold, <span class="keyword">const</span> <a class="code" href="structb2_transform.html">b2Transform</a>&amp; xfA, <span class="keyword">const</span> <a class="code" href="structb2_transform.html">b2Transform</a>&amp; xfB);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classb2_contact.html#ae3c2842e5325b2d4500f8ed1d4de2f72" title="Evaluate this contact with your own manifold and transforms. ">Evaluate</a>(<a class="code" href="structb2_manifold.html">b2Manifold</a>* manifold, <span class="keyword">const</span> <a class="code" href="structb2_transform.html">b2Transform</a>&amp; xfA, <span class="keyword">const</span> <a class="code" href="structb2_transform.html">b2Transform</a>&amp; xfB);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:03 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

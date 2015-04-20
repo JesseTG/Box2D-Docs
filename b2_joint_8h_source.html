@@ -76,7 +76,7 @@
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">class </span><a class="code" href="classb2_joint.html">b2Joint</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_solver_data.html" title="Solver Data. ">b2SolverData</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">struct </span>b2SolverData;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="classb2_block_allocator.html">b2BlockAllocator</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">enum</span> b2JointType</div>
@@ -103,19 +103,19 @@
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    e_equalLimits</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structb2_jacobian.html">   53</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_jacobian.html">b2Jacobian</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">struct </span>b2Jacobian</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a> linear;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    float32 angularA;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    float32 angularB;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structb2_joint_edge.html">   65</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_joint_edge.html">b2JointEdge</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">struct </span>b2JointEdge</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structb2_joint_edge.html#a64aef21fb91211871de8796baecccb95">   67</a></span>&#160;    <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* <a class="code" href="structb2_joint_edge.html#a64aef21fb91211871de8796baecccb95" title="provides quick access to the other body attached. ">other</a>;          </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structb2_joint_edge.html#ab5bac5d495af1280c50271f56a221503">   68</a></span>&#160;    <a class="code" href="classb2_joint.html">b2Joint</a>* <a class="code" href="structb2_joint_edge.html#ab5bac5d495af1280c50271f56a221503" title="the joint ">joint</a>;         </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structb2_joint_edge.html#acc3621e38d9664db2805e0fc29d71335">   69</a></span>&#160;    <a class="code" href="structb2_joint_edge.html">b2JointEdge</a>* <a class="code" href="structb2_joint_edge.html#acc3621e38d9664db2805e0fc29d71335" title="the previous joint edge in the body&#39;s joint list ">prev</a>;      </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structb2_joint_edge.html#a3d17286bc697bb620ee151e4cd07438c">   70</a></span>&#160;    <a class="code" href="structb2_joint_edge.html">b2JointEdge</a>* <a class="code" href="structb2_joint_edge.html#a3d17286bc697bb620ee151e4cd07438c" title="the next joint edge in the body&#39;s joint list ">next</a>;      </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* other;          </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classb2_joint.html">b2Joint</a>* joint;         </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    b2JointEdge* prev;      </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    b2JointEdge* next;      </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structb2_joint_def.html">   74</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_joint_def.html" title="Joint definitions are used to construct joints. ">b2JointDef</a></div>
@@ -176,7 +176,7 @@
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_world.html">b2World</a>;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_island.html" title="This is an internal class. ">b2Island</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2Island;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_gear_joint.html">b2GearJoint</a>;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">static</span> <a class="code" href="classb2_joint.html">b2Joint</a>* Create(<span class="keyword">const</span> <a class="code" href="structb2_joint_def.html" title="Joint definitions are used to construct joints. ">b2JointDef</a>* def, <a class="code" href="classb2_block_allocator.html">b2BlockAllocator</a>* allocator);</div>
@@ -185,17 +185,17 @@
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="classb2_joint.html">b2Joint</a>(<span class="keyword">const</span> <a class="code" href="structb2_joint_def.html" title="Joint definitions are used to construct joints. ">b2JointDef</a>* def);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classb2_joint.html">b2Joint</a>() {}</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitVelocityConstraints(<span class="keyword">const</span> <a class="code" href="structb2_solver_data.html" title="Solver Data. ">b2SolverData</a>&amp; data) = 0;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SolveVelocityConstraints(<span class="keyword">const</span> <a class="code" href="structb2_solver_data.html" title="Solver Data. ">b2SolverData</a>&amp; data) = 0;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitVelocityConstraints(<span class="keyword">const</span> b2SolverData&amp; data) = 0;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SolveVelocityConstraints(<span class="keyword">const</span> b2SolverData&amp; data) = 0;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// This returns true if the position errors are within tolerance.</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SolvePositionConstraints(<span class="keyword">const</span> <a class="code" href="structb2_solver_data.html" title="Solver Data. ">b2SolverData</a>&amp; data) = 0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SolvePositionConstraints(<span class="keyword">const</span> b2SolverData&amp; data) = 0;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    b2JointType m_type;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classb2_joint.html">b2Joint</a>* m_prev;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classb2_joint.html">b2Joint</a>* m_next;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="structb2_joint_edge.html">b2JointEdge</a> m_edgeA;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="structb2_joint_edge.html">b2JointEdge</a> m_edgeB;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    b2JointEdge m_edgeA;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    b2JointEdge m_edgeB;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* m_bodyA;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* m_bodyB;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
@@ -251,7 +251,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

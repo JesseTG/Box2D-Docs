@@ -82,8 +82,8 @@
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span>b2Controller;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span><a class="code" href="classb2_world.html">b2World</a>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_fixture_def.html">b2FixtureDef</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_joint_edge.html">b2JointEdge</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">struct </span><a class="code" href="structb2_contact_edge.html">b2ContactEdge</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">struct </span>b2JointEdge;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">struct </span>b2ContactEdge;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">enum</span> b2BodyType</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
@@ -244,11 +244,11 @@
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <a class="code" href="classb2_fixture.html">b2Fixture</a>* <a class="code" href="classb2_body.html#a64634da20c6e0ab2d68a3cc9ea15efc3" title="Get the list of all fixtures attached to this body. ">GetFixtureList</a>();</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keyword">const</span> <a class="code" href="classb2_fixture.html">b2Fixture</a>* <a class="code" href="classb2_body.html#a64634da20c6e0ab2d68a3cc9ea15efc3" title="Get the list of all fixtures attached to this body. ">GetFixtureList</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <a class="code" href="structb2_joint_edge.html">b2JointEdge</a>* <a class="code" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41" title="Get the list of all joints attached to this body. ">GetJointList</a>();</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_joint_edge.html">b2JointEdge</a>* <a class="code" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41" title="Get the list of all joints attached to this body. ">GetJointList</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    b2JointEdge* <a class="code" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41" title="Get the list of all joints attached to this body. ">GetJointList</a>();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keyword">const</span> b2JointEdge* <a class="code" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41" title="Get the list of all joints attached to this body. ">GetJointList</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a>* <a class="code" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">GetContactList</a>();</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keyword">const</span> <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a>* <a class="code" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">GetContactList</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    b2ContactEdge* <a class="code" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">GetContactList</a>();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keyword">const</span> b2ContactEdge* <a class="code" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">GetContactList</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* <a class="code" href="classb2_body.html#ad54182a11d02362b027a0eb072775bdc" title="Get the next body in the world&#39;s body list. ">GetNext</a>();</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keyword">const</span> <a class="code" href="classb2_body.html" title="A rigid body. These are created via b2World::CreateBody. ">b2Body</a>* <a class="code" href="classb2_body.html#ad54182a11d02362b027a0eb072775bdc" title="Get the next body in the world&#39;s body list. ">GetNext</a>() <span class="keyword">const</span>;</div>
@@ -265,9 +265,9 @@
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_world.html">b2World</a>;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_island.html" title="This is an internal class. ">b2Island</a>;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_contact_manager.html">b2ContactManager</a>;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_contact_solver.html">b2ContactSolver</a>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2Island;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2ContactManager;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>b2ContactSolver;</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_contact.html">b2Contact</a>;</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    </div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classb2_distance_joint.html">b2DistanceJoint</a>;</div>
@@ -313,7 +313,7 @@
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    int32 m_islandIndex;</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <a class="code" href="structb2_transform.html">b2Transform</a> m_xf;       <span class="comment">// the body origin transform</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="structb2_sweep.html">b2Sweep</a> m_sweep;        <span class="comment">// the swept motion for CCD</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    b2Sweep m_sweep;        <span class="comment">// the swept motion for CCD</span></div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a> m_linearVelocity;</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    float32 m_angularVelocity;</div>
@@ -328,8 +328,8 @@
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <a class="code" href="classb2_fixture.html">b2Fixture</a>* m_fixtureList;</div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    int32 m_fixtureCount;</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <a class="code" href="structb2_joint_edge.html">b2JointEdge</a>* m_jointList;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a>* m_contactList;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    b2JointEdge* m_jointList;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    b2ContactEdge* m_contactList;</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    float32 m_mass, m_invMass;</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
@@ -362,17 +362,17 @@
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;</div>
 <div class="line"><a name="l00484"></a><span class="lineno"><a class="line" href="classb2_body.html#a57c4a1946a6dd5a00e28691bc419fdcd">  484</a></span>&#160;<span class="keyword">inline</span> float32 <a class="code" href="classb2_body.html#a57c4a1946a6dd5a00e28691bc419fdcd">b2Body::GetAngle</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">return</span> m_sweep.<a class="code" href="structb2_sweep.html#afa96bacc91dd3c92ae716a45512332d6" title="world angles ">a</a>;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">return</span> m_sweep.a;</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;}</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;</div>
 <div class="line"><a name="l00489"></a><span class="lineno"><a class="line" href="classb2_body.html#a04db0c7b12b315802e58b33884f4f63c">  489</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; <a class="code" href="classb2_body.html#a04db0c7b12b315802e58b33884f4f63c" title="Get the world position of the center of mass. ">b2Body::GetWorldCenter</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keywordflow">return</span> m_sweep.<a class="code" href="structb2_sweep.html#a1b5402e01b92cc82473389fc6f0375c3" title="center world positions ">c</a>;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keywordflow">return</span> m_sweep.c;</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;}</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
 <div class="line"><a name="l00494"></a><span class="lineno"><a class="line" href="classb2_body.html#a27ed7f8a3b36ddfb01069ee8f7106033">  494</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; <a class="code" href="classb2_body.html#a27ed7f8a3b36ddfb01069ee8f7106033" title="Get the local position of the center of mass. ">b2Body::GetLocalCenter</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keywordflow">return</span> m_sweep.<a class="code" href="structb2_sweep.html#a4bcc302cf78771896d6256fc53f2f8be" title="local center of mass position ">localCenter</a>;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keywordflow">return</span> m_sweep.localCenter;</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;}</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
 <div class="line"><a name="l00499"></a><span class="lineno"><a class="line" href="classb2_body.html#a832f3989a44f0d4782c80456832197ad">  499</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classb2_body.html#a832f3989a44f0d4782c80456832197ad">b2Body::SetLinearVelocity</a>(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; v)</div>
@@ -422,14 +422,14 @@
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;</div>
 <div class="line"><a name="l00544"></a><span class="lineno"><a class="line" href="classb2_body.html#a8c8916caf67c1e618a07d8b6b9253fa8">  544</a></span>&#160;<span class="keyword">inline</span> float32 <a class="code" href="classb2_body.html#a8c8916caf67c1e618a07d8b6b9253fa8">b2Body::GetInertia</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">return</span> m_I + m_mass * b2Dot(m_sweep.<a class="code" href="structb2_sweep.html#a4bcc302cf78771896d6256fc53f2f8be" title="local center of mass position ">localCenter</a>, m_sweep.<a class="code" href="structb2_sweep.html#a4bcc302cf78771896d6256fc53f2f8be" title="local center of mass position ">localCenter</a>);</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">return</span> m_I + m_mass * b2Dot(m_sweep.localCenter, m_sweep.localCenter);</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;}</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;</div>
 <div class="line"><a name="l00549"></a><span class="lineno"><a class="line" href="classb2_body.html#ad0a90df7e2617a8572cd476267f95417">  549</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classb2_body.html#ad0a90df7e2617a8572cd476267f95417">b2Body::GetMassData</a>(<a class="code" href="structb2_mass_data.html" title="This holds the mass data computed for a shape. ">b2MassData</a>* data)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    data-&gt;<a class="code" href="structb2_mass_data.html#aea85d9595a38d2eed05b8d2ea80d97b1" title="The mass of the shape, usually in kilograms. ">mass</a> = m_mass;</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    data-&gt;<a class="code" href="structb2_mass_data.html#ad2d06e96e2d79d895df16ae0e5fe0376" title="The rotational inertia of the shape about the local origin. ">I</a> = m_I + m_mass * b2Dot(m_sweep.<a class="code" href="structb2_sweep.html#a4bcc302cf78771896d6256fc53f2f8be" title="local center of mass position ">localCenter</a>, m_sweep.<a class="code" href="structb2_sweep.html#a4bcc302cf78771896d6256fc53f2f8be" title="local center of mass position ">localCenter</a>);</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    data-&gt;<a class="code" href="structb2_mass_data.html#a1d59bebc7030c4dded0c2febc57ebdd7" title="The position of the shape&#39;s centroid relative to the shape&#39;s origin. ">center</a> = m_sweep.<a class="code" href="structb2_sweep.html#a4bcc302cf78771896d6256fc53f2f8be" title="local center of mass position ">localCenter</a>;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    data-&gt;<a class="code" href="structb2_mass_data.html#ad2d06e96e2d79d895df16ae0e5fe0376" title="The rotational inertia of the shape about the local origin. ">I</a> = m_I + m_mass * b2Dot(m_sweep.localCenter, m_sweep.localCenter);</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    data-&gt;<a class="code" href="structb2_mass_data.html#a1d59bebc7030c4dded0c2febc57ebdd7" title="The position of the shape&#39;s centroid relative to the shape&#39;s origin. ">center</a> = m_sweep.localCenter;</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;}</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;</div>
 <div class="line"><a name="l00556"></a><span class="lineno"><a class="line" href="classb2_body.html#a8055b90bccb51383caa8c42fbc96c9c3">  556</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a> <a class="code" href="classb2_body.html#a8055b90bccb51383caa8c42fbc96c9c3">b2Body::GetWorldPoint</a>(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; localPoint)<span class="keyword"> const</span></div>
@@ -454,7 +454,7 @@
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;</div>
 <div class="line"><a name="l00576"></a><span class="lineno"><a class="line" href="classb2_body.html#a4238ae43f5afeb2126b8e8bf765334b5">  576</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a> <a class="code" href="classb2_body.html#a4238ae43f5afeb2126b8e8bf765334b5">b2Body::GetLinearVelocityFromWorldPoint</a>(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; worldPoint)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="keywordflow">return</span> m_linearVelocity + b2Cross(m_angularVelocity, worldPoint - m_sweep.<a class="code" href="structb2_sweep.html#a1b5402e01b92cc82473389fc6f0375c3" title="center world positions ">c</a>);</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="keywordflow">return</span> m_linearVelocity + b2Cross(m_angularVelocity, worldPoint - m_sweep.c);</div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;}</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;</div>
 <div class="line"><a name="l00581"></a><span class="lineno"><a class="line" href="classb2_body.html#a4429e3f380e882def11c52ac893b8e2e">  581</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a> <a class="code" href="classb2_body.html#a4429e3f380e882def11c52ac893b8e2e">b2Body::GetLinearVelocityFromLocalPoint</a>(<span class="keyword">const</span> <a class="code" href="structb2_vec2.html" title="A 2D column vector. ">b2Vec2</a>&amp; localPoint)<span class="keyword"> const</span></div>
@@ -573,22 +573,22 @@
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="keywordflow">return</span> m_fixtureList;</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;}</div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;</div>
-<div class="line"><a name="l00697"></a><span class="lineno"><a class="line" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41">  697</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structb2_joint_edge.html">b2JointEdge</a>* <a class="code" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41" title="Get the list of all joints attached to this body. ">b2Body::GetJointList</a>()</div>
+<div class="line"><a name="l00697"></a><span class="lineno"><a class="line" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41">  697</a></span>&#160;<span class="keyword">inline</span> b2JointEdge* <a class="code" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41" title="Get the list of all joints attached to this body. ">b2Body::GetJointList</a>()</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;{</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    <span class="keywordflow">return</span> m_jointList;</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;}</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="structb2_joint_edge.html">b2JointEdge</a>* <a class="code" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41" title="Get the list of all joints attached to this body. ">b2Body::GetJointList</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> b2JointEdge* <a class="code" href="classb2_body.html#a55cf2eb851780599ca5c1f6f25a17e41" title="Get the list of all joints attached to this body. ">b2Body::GetJointList</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    <span class="keywordflow">return</span> m_jointList;</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;}</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;</div>
-<div class="line"><a name="l00707"></a><span class="lineno"><a class="line" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">  707</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a>* <a class="code" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">b2Body::GetContactList</a>()</div>
+<div class="line"><a name="l00707"></a><span class="lineno"><a class="line" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">  707</a></span>&#160;<span class="keyword">inline</span> b2ContactEdge* <a class="code" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">b2Body::GetContactList</a>()</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;{</div>
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keywordflow">return</span> m_contactList;</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;}</div>
 <div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="structb2_contact_edge.html">b2ContactEdge</a>* <a class="code" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">b2Body::GetContactList</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> b2ContactEdge* <a class="code" href="classb2_body.html#a16bdbfb266c82a0ef51be351a8928bc5">b2Body::GetContactList</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keywordflow">return</span> m_contactList;</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;}</div>
@@ -629,7 +629,7 @@
 <div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="keywordflow">if</span> (m_flags &amp; e_awakeFlag)</div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    {</div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        m_force += force;</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        m_torque += b2Cross(point - m_sweep.<a class="code" href="structb2_sweep.html#a1b5402e01b92cc82473389fc6f0375c3" title="center world positions ">c</a>, force);</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        m_torque += b2Cross(point - m_sweep.c, force);</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    }</div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;}</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;</div>
@@ -687,7 +687,7 @@
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="keywordflow">if</span> (m_flags &amp; e_awakeFlag)</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    {</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        m_linearVelocity += m_invMass * impulse;</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        m_angularVelocity += m_invI * b2Cross(point - m_sweep.<a class="code" href="structb2_sweep.html#a1b5402e01b92cc82473389fc6f0375c3" title="center world positions ">c</a>, impulse);</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        m_angularVelocity += m_invI * b2Cross(point - m_sweep.c, impulse);</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    }</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;}</div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;</div>
@@ -712,18 +712,18 @@
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;</div>
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> b2Body::SynchronizeTransform()</div>
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;{</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;    m_xf.q.<a class="code" href="structb2_rot.html#acde9186de0a4a7397bf8ef714408ad60" title="Set using an angle in radians. ">Set</a>(m_sweep.<a class="code" href="structb2_sweep.html#afa96bacc91dd3c92ae716a45512332d6" title="world angles ">a</a>);</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    m_xf.p = m_sweep.<a class="code" href="structb2_sweep.html#a1b5402e01b92cc82473389fc6f0375c3" title="center world positions ">c</a> - b2Mul(m_xf.q, m_sweep.<a class="code" href="structb2_sweep.html#a4bcc302cf78771896d6256fc53f2f8be" title="local center of mass position ">localCenter</a>);</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;    m_xf.q.<a class="code" href="structb2_rot.html#acde9186de0a4a7397bf8ef714408ad60" title="Set using an angle in radians. ">Set</a>(m_sweep.a);</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    m_xf.p = m_sweep.c - b2Mul(m_xf.q, m_sweep.localCenter);</div>
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;}</div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;</div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> b2Body::Advance(float32 alpha)</div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;{</div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <span class="comment">// Advance to the new safe time. This doesn&#39;t sync the broad-phase.</span></div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    m_sweep.<a class="code" href="structb2_sweep.html#a35eb9b976ca87c9b8d758bec070c6c06">Advance</a>(alpha);</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    m_sweep.<a class="code" href="structb2_sweep.html#a1b5402e01b92cc82473389fc6f0375c3" title="center world positions ">c</a> = m_sweep.c0;</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    m_sweep.<a class="code" href="structb2_sweep.html#afa96bacc91dd3c92ae716a45512332d6" title="world angles ">a</a> = m_sweep.a0;</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    m_xf.q.<a class="code" href="structb2_rot.html#acde9186de0a4a7397bf8ef714408ad60" title="Set using an angle in radians. ">Set</a>(m_sweep.<a class="code" href="structb2_sweep.html#afa96bacc91dd3c92ae716a45512332d6" title="world angles ">a</a>);</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    m_xf.p = m_sweep.<a class="code" href="structb2_sweep.html#a1b5402e01b92cc82473389fc6f0375c3" title="center world positions ">c</a> - b2Mul(m_xf.q, m_sweep.<a class="code" href="structb2_sweep.html#a4bcc302cf78771896d6256fc53f2f8be" title="local center of mass position ">localCenter</a>);</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    m_sweep.Advance(alpha);</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    m_sweep.c = m_sweep.c0;</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    m_sweep.a = m_sweep.a0;</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    m_xf.q.<a class="code" href="structb2_rot.html#acde9186de0a4a7397bf8ef714408ad60" title="Set using an angle in radians. ">Set</a>(m_sweep.a);</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    m_xf.p = m_sweep.c - b2Mul(m_xf.q, m_sweep.localCenter);</div>
 <div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;}</div>
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;</div>
 <div class="line"><a name="l00850"></a><span class="lineno"><a class="line" href="classb2_body.html#abfd9466763b20977f9122d0e162dfeb9">  850</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classb2_world.html">b2World</a>* <a class="code" href="classb2_body.html#abfd9466763b20977f9122d0e162dfeb9" title="Get the parent world of this body. ">b2Body::GetWorld</a>()</div>
@@ -740,7 +740,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 13 2015 16:56:03 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2015 15:46:04 for Box2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
